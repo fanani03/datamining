@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 1 &#8212; My sample book</title>
+    <title>Tugas 1 &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -96,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Data Mining</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -112,7 +112,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TUGAS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Tugas 1
@@ -177,7 +182,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/tugas1.ipynb"
+        <a href="https://mybinder.org/v2/gh/fanani03/datamining/master?urlpath=tree/docs/tugas1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -190,6 +195,24 @@ title="Launch on Binder"
     <img src="_static/images/logo_binder.svg">
   </span>
 <span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/drive/1-CiciIb7lS4Xwm_P4MBrHsD5ou78GT4C/github/fanani03/datamining/blob/master/docs/tugas1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
 </a>
 
       </li>
@@ -220,7 +243,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/fanani03/datamining"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -237,7 +260,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas1.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/fanani03/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -302,12 +325,53 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url">
+   <strong>
+    1. Membaca data dari url
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
+   2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
+   3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -319,6 +383,36 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url">
+   <strong>
+    1. Membaca data dari url
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
+   2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
+   3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -334,7 +428,9 @@ title="Print to PDF"
 <li><p>Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)</p></li>
 </ol>
 <p>Jawaban</p>
-<p><strong>1. Membaca data dari url</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="membaca-data-dari-url">
+<h1><strong>1. Membaca data dari url</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -387,7 +483,7 @@ memory usage: 7.8+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ef647929-c687-4a9d-b59f-e182e76b954e">
+  <div id="df-f0767d59-412b-4cdd-beb4-aa95adc5465b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -476,7 +572,7 @@ memory usage: 7.8+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ef647929-c687-4a9d-b59f-e182e76b954e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f0767d59-412b-4cdd-beb4-aa95adc5465b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -527,12 +623,12 @@ memory usage: 7.8+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ef647929-c687-4a9d-b59f-e182e76b954e button.colab-df-convert');
+          document.querySelector('#df-f0767d59-412b-4cdd-beb4-aa95adc5465b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ef647929-c687-4a9d-b59f-e182e76b954e');
+          const element = document.querySelector('#df-f0767d59-412b-4cdd-beb4-aa95adc5465b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -553,8 +649,10 @@ memory usage: 7.8+ KB
   </div>
 </div></div>
 </div>
-<p><strong>2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)
-Mean</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
+<h1>2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)<a class="headerlink" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik" title="Permalink to this headline">#</a></h1>
+<p>Mean</p>
 <p>Kolom Year</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -719,7 +817,9 @@ dtype: float64
 </div>
 </div>
 </div>
-<p><strong>3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
+<h1>3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)<a class="headerlink" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -839,7 +939,7 @@ dtype: float64
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By Ahmad Fanani<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
