@@ -1,6 +1,6 @@
 # Introduction
 
-<h3>Selamat datang dan perkenalkan : <h3><br>
+<h3>Selamat datang dan perkenalkan : <h3>
 <h5>Nama : Ahmad Fanani <br>
 NIM  : 200411100143 <br>
 Kelas  : Penambangan Data A <br><h5>
