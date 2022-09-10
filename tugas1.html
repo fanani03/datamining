@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 1 &#8212; Data Mining</title>
+    <title>Tugas 1 - Statistik Deskriptif &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -120,7 +122,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tugas 1
+   Tugas 1 - Statistik Deskriptif
   </a>
  </li>
 </ul>
@@ -349,7 +351,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Tugas 1
+   Tugas 1 - Statistik Deskriptif
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -378,7 +380,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tugas 1</h1>
+                <h1>Tugas 1 - Statistik Deskriptif</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -390,7 +392,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Tugas 1
+   Tugas 1 - Statistik Deskriptif
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -420,8 +422,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
-<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-statistik-deskriptif">
+<h1>Tugas 1 - Statistik Deskriptif<a class="headerlink" href="#tugas-1-statistik-deskriptif" title="Permalink to this headline">#</a></h1>
 <ol class="simple">
 <li><p>Membaca data dari url</p></li>
 <li><p>Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)</p></li>
@@ -431,6 +433,7 @@ title="Print to PDF"
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="membaca-data-dari-url">
 <h1><strong>1. Membaca data dari url</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h1>
+<p>Untuk membaca data dalam sebuah file excel saya menggunakan library python yang bernama PANDAS</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -483,7 +486,7 @@ memory usage: 7.8+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f0767d59-412b-4cdd-beb4-aa95adc5465b">
+  <div id="df-98522076-47a9-4e4a-be14-2a2e319a0413">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -572,7 +575,7 @@ memory usage: 7.8+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f0767d59-412b-4cdd-beb4-aa95adc5465b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-98522076-47a9-4e4a-be14-2a2e319a0413')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -623,12 +626,12 @@ memory usage: 7.8+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f0767d59-412b-4cdd-beb4-aa95adc5465b button.colab-df-convert');
+          document.querySelector('#df-98522076-47a9-4e4a-be14-2a2e319a0413 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f0767d59-412b-4cdd-beb4-aa95adc5465b');
+          const element = document.querySelector('#df-98522076-47a9-4e4a-be14-2a2e319a0413');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -652,7 +655,27 @@ memory usage: 7.8+ KB
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
 <h1>2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)<a class="headerlink" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik" title="Permalink to this headline">#</a></h1>
-<p>Mean</p>
+<p><strong>2.1 Mean</strong></p>
+<p>Mean merupakan salah satu ukuran pemusatan data, cara menghitung nya yaitu semua nilai dijumlahkan kemudian dibagi dengan total nilai yang di hitung</p>
+<p>Rumus mean</p>
+<p>\begin{align}
+mean =    \frac{1}{n} \sum_{i=i}^{n} x_{i}
+\end{align}</p>
+<p><strong>2.2 Median</strong></p>
+<p>Median juga salah satu ukuran pemusatan data. cara menghitungnya adalah semua data diurutkan kemudian kita ambil nilai tengah nya</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal {median} = tb + (\frac {\frac {n} 2 - F } {Fm} ) p
+\]</div>
+<p>Penjelasan :</p>
+<ul class="simple">
+<li><p>Tb = tepi bawah dari kelas n/2</p></li>
+<li><p>F = Frekuensi kumulatif sebelum kelas median</p></li>
+<li><p>Fm = frekuensi kelas median</p></li>
+<li><p>p = interval</p></li>
+</ul>
+<p><strong>2.3 Modus</strong></p>
+<p>Modus adalah nilai yang sering muncul</p>
 <p>Kolom Year</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -929,7 +952,7 @@ dtype: float64
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+            <p class="prev-next-title">Introduction</p>
         </div>
     </a>
 </div>
