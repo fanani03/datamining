@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tugas 2 - Diskritisasi" href="tugas2.html" />
+    <link rel="prev" title="Tugas 1 - Statistik Deskriptif" href="1-statistika-deskriptif.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,11 +121,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="1-statistika-deskriptif.html">
    Tugas 1 - Statistik Deskriptif
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas2.html">
-   Tugas 2 - Diskritisasi
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -419,7 +414,7 @@ memory usage: 2.9+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f5df766c-ec6c-4e46-9afd-91e39bb5172a">
+  <div id="df-0e5bbf45-9e31-4e02-9227-b178a5826c1e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -508,7 +503,7 @@ memory usage: 2.9+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f5df766c-ec6c-4e46-9afd-91e39bb5172a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0e5bbf45-9e31-4e02-9227-b178a5826c1e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -559,12 +554,12 @@ memory usage: 2.9+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f5df766c-ec6c-4e46-9afd-91e39bb5172a button.colab-df-convert');
+          document.querySelector('#df-0e5bbf45-9e31-4e02-9227-b178a5826c1e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f5df766c-ec6c-4e46-9afd-91e39bb5172a');
+          const element = document.querySelector('#df-0e5bbf45-9e31-4e02-9227-b178a5826c1e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -621,7 +616,7 @@ memory usage: 2.9+ KB
 </div>
 </div>
 </div>
-<p>Hasil yang diperoleh sebagai berikut</p>
+<p>Hasil yang didapatkan sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -630,7 +625,7 @@ memory usage: 2.9+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4ad93372-51f5-4024-9dd9-f8ab0092610b">
+  <div id="df-ab8d6281-10b9-49a6-8cb9-ad16119c321f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -730,7 +725,7 @@ memory usage: 2.9+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4ad93372-51f5-4024-9dd9-f8ab0092610b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ab8d6281-10b9-49a6-8cb9-ad16119c321f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -781,12 +776,12 @@ memory usage: 2.9+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4ad93372-51f5-4024-9dd9-f8ab0092610b button.colab-df-convert');
+          document.querySelector('#df-ab8d6281-10b9-49a6-8cb9-ad16119c321f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4ad93372-51f5-4024-9dd9-f8ab0092610b');
+          const element = document.querySelector('#df-ab8d6281-10b9-49a6-8cb9-ad16119c321f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -807,54 +802,6 @@ memory usage: 2.9+ KB
   </div>
 </div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;ukuran_binned_freq&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3360</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: &#39;ukuran_binned_freq&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">73</span><span class="n">b6db7c9c8f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">del</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;ukuran_binned_freq&quot;</span><span class="p">])</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/generic.py</span> in <span class="ni">__delitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3961</span>             <span class="c1"># there was no match, this call should raise the appropriate</span>
-<span class="g g-Whitespace">   </span><span class="mi">3962</span>             <span class="c1"># exception:</span>
-<span class="ne">-&gt; </span><span class="mi">3963</span>             <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3964</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">idelete</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3965</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3363</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3364</span> 
-<span class="g g-Whitespace">   </span><span class="mi">3365</span>         <span class="k">if</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isna</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasnans</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>: &#39;ukuran_binned_freq&#39;
-</pre></div>
-</div>
-</div>
-</div>
 <p><strong>2.1 Equal Frequency</strong></p>
 <p>Equal-frequency intervals adalah discretization yang membagi data numerik menjadi beberapa kelompok dengan jumlah anggota yang kurang lebih sama besar.</p>
 <div class="cell docutils container">
@@ -873,7 +820,7 @@ memory usage: 2.9+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-28b4ac60-13bc-4a22-a6c9-ade60c32dfa7">
+  <div id="df-ce8fa6d6-8635-4e9e-b0f0-8fc108bcf1ec">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -984,7 +931,7 @@ memory usage: 2.9+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-28b4ac60-13bc-4a22-a6c9-ade60c32dfa7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ce8fa6d6-8635-4e9e-b0f0-8fc108bcf1ec')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1035,12 +982,12 @@ memory usage: 2.9+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-28b4ac60-13bc-4a22-a6c9-ade60c32dfa7 button.colab-df-convert');
+          document.querySelector('#df-ce8fa6d6-8635-4e9e-b0f0-8fc108bcf1ec button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-28b4ac60-13bc-4a22-a6c9-ade60c32dfa7');
+          const element = document.querySelector('#df-ce8fa6d6-8635-4e9e-b0f0-8fc108bcf1ec');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1090,11 +1037,11 @@ memory usage: 2.9+ KB
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas2.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="1-statistika-deskriptif.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tugas 2 - Diskritisasi</p>
+            <p class="prev-next-title">Tugas 1 - Statistik Deskriptif</p>
         </div>
     </a>
 </div>
