@@ -383,59 +383,14 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting latex
-  Downloading latex-0.7.0.tar.gz (6.5 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting tempdir
-  Downloading tempdir-0.7.1.tar.gz (5.9 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting data
-  Downloading data-0.4.tar.gz (7.0 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: future in /usr/local/lib/python3.7/dist-packages (from latex) (0.16.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting shutilwhich
-  Downloading shutilwhich-1.1.0.tar.gz (2.3 kB)
-Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (from data-&gt;latex) (1.15.0)
+Requirement already satisfied: latex in /usr/local/lib/python3.7/dist-packages (0.7.0)
+Requirement already satisfied: shutilwhich in /usr/local/lib/python3.7/dist-packages (from latex) (1.1.0)
+Requirement already satisfied: data in /usr/local/lib/python3.7/dist-packages (from latex) (0.4)
+Requirement already satisfied: future in /usr/local/lib/python3.7/dist-packages (from latex) (0.16.0)
+Requirement already satisfied: tempdir in /usr/local/lib/python3.7/dist-packages (from latex) (0.7.1)
 Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from data-&gt;latex) (4.4.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting funcsigs
-  Downloading funcsigs-1.0.2-py2.py3-none-any.whl (17 kB)
-Building wheels for collected packages: latex, data, shutilwhich, tempdir
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for latex (setup.py) ... ?25l?25hdone
-  Created wheel for latex: filename=latex-0.7.0-py3-none-any.whl size=7604 sha256=de9bd403c3a1d6ae86919381bd80182f62f4a2879514e9705709de493268fee3
-  Stored in directory: /root/.cache/pip/wheels/57/d6/11/5d5718227890d9e479b6137cb406410c37a0b84b2ab35b872b
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for data (setup.py) ... ?25l?25hdone
-  Created wheel for data: filename=data-0.4-py3-none-any.whl size=7247 sha256=47ced526087673ed7fef948c7245959b1dd944b4ebd6f3eb676d3bd422836928
-  Stored in directory: /root/.cache/pip/wheels/28/76/4b/7db27e02c1de4d2181559d108fcdfed1680ff7d3534553d460
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for shutilwhich (setup.py) ... ?25l?25hdone
-  Created wheel for shutilwhich: filename=shutilwhich-1.1.0-py3-none-any.whl size=2781 sha256=36e4723b1f4073ab005d12788739df0188158a56b900fafa444bf4e247b9e690
-  Stored in directory: /root/.cache/pip/wheels/4c/c0/ce/5a47f35186acbe73e38811df30daaf798c81a7599bb2d5995a
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for tempdir (setup.py) ... ?25l?25hdone
-  Created wheel for tempdir: filename=tempdir-0.7.1-py3-none-any.whl size=2214 sha256=5d23f7a7f9ac24301abb33ed6bf106e32b8c3feeac0d961aa4704ee53be7458a
-  Stored in directory: /root/.cache/pip/wheels/7a/f1/d7/124b54c21a9ba4973bc60fcda6cdc264271f3c4d607be0486d
-Successfully built latex data shutilwhich tempdir
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: funcsigs, tempdir, shutilwhich, data, latex
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed data-0.4 funcsigs-1.0.2 latex-0.7.0 shutilwhich-1.1.0 tempdir-0.7.1
+Requirement already satisfied: funcsigs in /usr/local/lib/python3.7/dist-packages (from data-&gt;latex) (1.0.2)
+Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (from data-&gt;latex) (1.15.0)
 </pre></div>
 </div>
 </div>
@@ -466,7 +421,7 @@ P(A | B) = \frac{P(B | A) P(A)}{P(B)}.
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0411948b-4f34-4c67-b129-37e0a154010a">
+  <div id="df-cad402c5-e0fd-4ff5-84b4-2ac96e979e5f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -634,7 +589,7 @@ P(A | B) = \frac{P(B | A) P(A)}{P(B)}.
 </table>
 <p>5 rows × 32 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0411948b-4f34-4c67-b129-37e0a154010a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cad402c5-e0fd-4ff5-84b4-2ac96e979e5f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -685,12 +640,12 @@ P(A | B) = \frac{P(B | A) P(A)}{P(B)}.
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0411948b-4f34-4c67-b129-37e0a154010a button.colab-df-convert');
+          document.querySelector('#df-cad402c5-e0fd-4ff5-84b4-2ac96e979e5f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0411948b-4f34-4c67-b129-37e0a154010a');
+          const element = document.querySelector('#df-cad402c5-e0fd-4ff5-84b4-2ac96e979e5f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});

@@ -443,8 +443,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Data Gempa</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/openintro/earthquakes.csv&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pengukuran Burung</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/Stat2Data/Cuckoo.csv&quot;</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -459,20 +459,15 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 123 entries, 0 to 122
-Data columns (total 8 columns):
+RangeIndex: 120 entries, 0 to 119
+Data columns (total 3 columns):
  #   Column      Non-Null Count  Dtype  
 ---  ------      --------------  -----  
- 0   Unnamed: 0  123 non-null    int64  
- 1   year        123 non-null    int64  
- 2   month       123 non-null    object 
- 3   day         123 non-null    int64  
- 4   richter     123 non-null    float64
- 5   area        119 non-null    object 
- 6   region      122 non-null    object 
- 7   deaths      121 non-null    float64
-dtypes: float64(2), int64(3), object(3)
-memory usage: 7.8+ KB
+ 0   Unnamed: 0  120 non-null    int64  
+ 1   Bird        120 non-null    object 
+ 2   Length      120 non-null    float64
+dtypes: float64(1), int64(1), object(1)
+memory usage: 2.9+ KB
 </pre></div>
 </div>
 </div>
@@ -480,13 +475,13 @@ memory usage: 7.8+ KB
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan 5 baris teratas</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-98522076-47a9-4e4a-be14-2a2e319a0413">
+  <div id="df-910f67db-3198-4bc8-86ad-de2cd61010c0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -507,75 +502,75 @@ memory usage: 7.8+ KB
     <tr style="text-align: right;">
       <th></th>
       <th>Unnamed: 0</th>
-      <th>year</th>
-      <th>month</th>
-      <th>day</th>
-      <th>richter</th>
-      <th>area</th>
-      <th>region</th>
-      <th>deaths</th>
+      <th>Bird</th>
+      <th>Length</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>1</td>
-      <td>1902</td>
-      <td>April</td>
-      <td>19</td>
-      <td>7.5</td>
-      <td>Quezaltenango and San Marco</td>
-      <td>Guatemala</td>
-      <td>2000.0</td>
+      <td>mdw_pippit</td>
+      <td>19.65</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>1902</td>
-      <td>December</td>
-      <td>16</td>
-      <td>6.4</td>
-      <td>Uzbekistan</td>
-      <td>Russia</td>
-      <td>4700.0</td>
+      <td>mdw_pippit</td>
+      <td>20.05</td>
     </tr>
     <tr>
       <th>2</th>
       <td>3</td>
-      <td>1903</td>
-      <td>April</td>
-      <td>28</td>
-      <td>7.0</td>
-      <td>Malazgirt</td>
-      <td>Turkey</td>
-      <td>3500.0</td>
+      <td>mdw_pippit</td>
+      <td>20.65</td>
     </tr>
     <tr>
       <th>3</th>
       <td>4</td>
-      <td>1903</td>
-      <td>May</td>
-      <td>28</td>
-      <td>5.8</td>
-      <td>Gole</td>
-      <td>Turkey</td>
-      <td>1000.0</td>
+      <td>mdw_pippit</td>
+      <td>20.85</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
-      <td>1905</td>
-      <td>April</td>
-      <td>4</td>
-      <td>7.5</td>
-      <td>Kangra</td>
-      <td>India</td>
-      <td>19000.0</td>
+      <td>mdw_pippit</td>
+      <td>21.65</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>mdw_pippit</td>
+      <td>21.65</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>mdw_pippit</td>
+      <td>21.65</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>mdw_pippit</td>
+      <td>21.85</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>mdw_pippit</td>
+      <td>21.85</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>mdw_pippit</td>
+      <td>21.85</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-98522076-47a9-4e4a-be14-2a2e319a0413')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-910f67db-3198-4bc8-86ad-de2cd61010c0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -626,12 +621,12 @@ memory usage: 7.8+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-98522076-47a9-4e4a-be14-2a2e319a0413 button.colab-df-convert');
+          document.querySelector('#df-910f67db-3198-4bc8-86ad-de2cd61010c0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-98522076-47a9-4e4a-be14-2a2e319a0413');
+          const element = document.querySelector('#df-910f67db-3198-4bc8-86ad-de2cd61010c0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -658,9 +653,10 @@ memory usage: 7.8+ KB
 <p><strong>2.1 Mean</strong></p>
 <p>Mean merupakan salah satu ukuran pemusatan data, cara menghitung nya yaitu semua nilai dijumlahkan kemudian dibagi dengan total nilai yang di hitung</p>
 <p>Rumus mean</p>
-<p>\begin{align}
-mean =    \frac{1}{n} \sum_{i=i}^{n} x_{i}
-\end{align}</p>
+<div class="math notranslate nohighlight">
+\[
+      mean = \frac{1}{n} \sum_{i=i}^{n} x_{i}
+\]</div>
 <p><strong>2.2 Median</strong></p>
 <p>Median juga salah satu ukuran pemusatan data. cara menghitungnya adalah semua data diurutkan kemudian kita ambil nilai tengah nya</p>
 <div class="math notranslate nohighlight">
@@ -676,16 +672,16 @@ mean =    \frac{1}{n} \sum_{i=i}^{n} x_{i}
 </ul>
 <p><strong>2.3 Modus</strong></p>
 <p>Modus adalah nilai yang sering muncul</p>
-<p>Kolom Year</p>
+<p><strong>2.4 Perhitungan</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mean</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1956.6097560975609
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.46
 </pre></div>
 </div>
 </div>
@@ -693,12 +689,12 @@ mean =    \frac{1}{n} \sum_{i=i}^{n} x_{i}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#median</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1960.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.35
 </pre></div>
 </div>
 </div>
@@ -706,135 +702,12 @@ mean =    \frac{1}{n} \sum_{i=i}^{n} x_{i}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modus</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1976
-dtype: int64
-</pre></div>
-</div>
-</div>
-</div>
-<p>Kolom Day</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mean</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.975609756097562
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#median</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modus</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    10
-dtype: int64
-</pre></div>
-</div>
-</div>
-</div>
-<p>Kolom Richter</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mean</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;richter&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.128455284552846
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#median</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;richter&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modus</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;richter&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    7.3
-dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<p>Kolom Deaths</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mean</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;deaths&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17683.272727272728
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#median</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;deaths&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2790.0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modus</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;deaths&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1000.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    22.05
 dtype: float64
 </pre></div>
 </div>
@@ -843,6 +716,17 @@ dtype: float64
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
 <h1>3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)<a class="headerlink" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik" title="Permalink to this headline">#</a></h1>
+<p>Skewness adalah ukuran ketidaksimetrisan dalam distribusi nilai. Skewness dapat bernilai positif, negatif, dan nol.</p>
+<p>Skewness yang bernilai positif berarti ekor distribusi berada di sebelah kanan nilai terbanyak. Berarti, sebagian besar distribusi berada di nilai rendah. Skewness yang bernilai negatif berarti ekor distribusi berada di sebelah kiri, menunjukkan bahwa sebagian besar nilai berada di sisi kanan kurva. Sementara skewness bernilai nol berarti nilai terdistribusi secara simetris, dengan jarak antara ekor distribusi sebelah kanan dan kiri sama besar.
+$<span class="math notranslate nohighlight">\(
+skewness =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{3}}{(n-1) s^{3}}
+\)</span>$</p>
+<p>Penjelasan</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\bar{x}\)</span> adalah sampel mean</p></li>
+<li><p>s adalah standar deviasi</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{i}\)</span> adalah sampel</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -851,11 +735,10 @@ dtype: float64
 </div>
 </div>
 </div>
-<p>Kolom Year</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -865,58 +748,7 @@ dtype: float64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/tugas1_25_1.png" src="_images/tugas1_25_1.png" />
-</div>
-</div>
-<p>Kolom Day</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/tugas1_27_1.png" src="_images/tugas1_27_1.png" />
-</div>
-</div>
-<p>Kolom Richter</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;richter&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/tugas1_29_1.png" src="_images/tugas1_29_1.png" />
-</div>
-</div>
-<p>Kolom Deaths</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;deaths&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/tugas1_31_1.png" src="_images/tugas1_31_1.png" />
+<img alt="_images/tugas1_13_1.png" src="_images/tugas1_13_1.png" />
 </div>
 </div>
 </section>
