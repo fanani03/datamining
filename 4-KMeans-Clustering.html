@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 1 - Statistik Deskriptif &#8212; Data Mining</title>
+    <title>Tugas 4 - KMeans Clustering &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 2 - Diskritisasi" href="2-diskritisasi.html" />
-    <link rel="prev" title="Introduction" href="intro.html" />
+    <link rel="prev" title="Tugas 3 - Belajar KNN" href="3-KNN-IRISDataset.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,8 +118,8 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1-statistika-deskriptif.html">
    Tugas 1 - Statistik Deskriptif
   </a>
  </li>
@@ -136,8 +133,8 @@ const thebe_selector_output = ".output, .cell_output"
    Tugas 3 - Belajar KNN
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="4-KMeans-Clustering.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Tugas 4 - KMeans Clustering
   </a>
  </li>
@@ -200,7 +197,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1xTEpyV3MsaHAB2lmJ11R-V0ONKbS1D3m#scrollTo=qSlHbyCLh79W/github/fanani03/datamining/blob/master/docs/1-statistika-deskriptif.ipynb"
+        <a href="https://colab.research.google.com/drive/1xTEpyV3MsaHAB2lmJ11R-V0ONKbS1D3m#scrollTo=qSlHbyCLh79W/github/fanani03/datamining/blob/master/docs/4-KMeans-Clustering.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -260,7 +257,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/fanani03/datamining/issues/new?title=Issue%20on%20page%20%2F1-statistika-deskriptif.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/fanani03/datamining/issues/new?title=Issue%20on%20page%20%2F4-KMeans-Clustering.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -288,7 +285,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/1-statistika-deskriptif.ipynb"
+        <a href="_sources/4-KMeans-Clustering.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -325,94 +322,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Tugas 1 - Statistik Deskriptif
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-data-dari-url">
-   <strong>
-    1. Membaca data dari url
-   </strong>
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
-   2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
-   3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tugas 1 - Statistik Deskriptif</h1>
+                <h1>Tugas 4 - KMeans Clustering</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Tugas 1 - Statistik Deskriptif
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-data-dari-url">
-   <strong>
-    1. Membaca data dari url
-   </strong>
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
-   2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
-   3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -420,66 +346,32 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-statistik-deskriptif">
-<h1>Tugas 1 - Statistik Deskriptif<a class="headerlink" href="#tugas-1-statistik-deskriptif" title="Permalink to this headline">#</a></h1>
-<ol class="simple">
-<li><p>Membaca data dari url</p></li>
-<li><p>Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)</p></li>
-<li><p>Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)</p></li>
-</ol>
-<p>Jawaban</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="membaca-data-dari-url">
-<h1><strong>1. Membaca data dari url</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h1>
-<p>Untuk membaca data dalam sebuah file excel saya menggunakan library python yang bernama PANDAS</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4-kmeans-clustering">
+<h1>Tugas 4 - KMeans Clustering<a class="headerlink" href="#tugas-4-kmeans-clustering" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&quot;</span>
+<span class="c1">#the imported dataset does not have the required column names so lets add it</span>
+<span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepalL&#39;</span><span class="p">,</span> <span class="s1">&#39;sepalW&#39;</span><span class="p">,</span> <span class="s1">&#39;petalL&#39;</span><span class="p">,</span> <span class="s1">&#39;petalW&#39;</span><span class="p">,</span> <span class="s1">&#39;Class&#39;</span><span class="p">]</span>
+<span class="n">irisdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">colnames</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pengukuran Burung</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/Stat2Data/Cuckoo.csv&quot;</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan informasi tipe data di semua kolom</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 120 entries, 0 to 119
-Data columns (total 3 columns):
- #   Column      Non-Null Count  Dtype  
----  ------      --------------  -----  
- 0   Unnamed: 0  120 non-null    int64  
- 1   Bird        120 non-null    object 
- 2   Length      120 non-null    float64
-dtypes: float64(1), int64(1), object(1)
-memory usage: 2.9+ KB
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan 5 baris teratas</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">irisdata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-094f5125-ce31-42bf-a73d-f4fbf6f8553a">
+  <div id="df-f0859963-f4f7-4fac-a1b3-ebcfd82413ea">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -499,76 +391,58 @@ memory usage: 2.9+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
-      <th>Bird</th>
-      <th>Length</th>
+      <th>sepalL</th>
+      <th>sepalW</th>
+      <th>petalL</th>
+      <th>petalW</th>
+      <th>Class</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>mdw_pippit</td>
-      <td>19.65</td>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>mdw_pippit</td>
-      <td>20.05</td>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>mdw_pippit</td>
-      <td>20.65</td>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>mdw_pippit</td>
-      <td>20.85</td>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>mdw_pippit</td>
-      <td>21.65</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>mdw_pippit</td>
-      <td>21.65</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>mdw_pippit</td>
-      <td>21.65</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>8</td>
-      <td>mdw_pippit</td>
-      <td>21.85</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>mdw_pippit</td>
-      <td>21.85</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>mdw_pippit</td>
-      <td>21.85</td>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-094f5125-ce31-42bf-a73d-f4fbf6f8553a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f0859963-f4f7-4fac-a1b3-ebcfd82413ea')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -619,12 +493,12 @@ memory usage: 2.9+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-094f5125-ce31-42bf-a73d-f4fbf6f8553a button.colab-df-convert');
+          document.querySelector('#df-f0859963-f4f7-4fac-a1b3-ebcfd82413ea button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-094f5125-ce31-42bf-a73d-f4fbf6f8553a');
+          const element = document.querySelector('#df-f0859963-f4f7-4fac-a1b3-ebcfd82413ea');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -645,108 +519,60 @@ memory usage: 2.9+ KB
   </div>
 </div></div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik">
-<h1>2. Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)<a class="headerlink" href="#membuat-statistik-deskriptif-dari-data-setiap-atribut-yang-bertipe-numerik" title="Permalink to this headline">#</a></h1>
-<p><strong>2.1 Mean</strong></p>
-<p>Mean merupakan salah satu ukuran pemusatan data, cara menghitung nya yaitu semua nilai dijumlahkan kemudian dibagi dengan total nilai yang di hitung</p>
-<p>Rumus mean</p>
-<div class="math notranslate nohighlight">
-\[
-      mean = \frac{1}{n} \sum_{i=i}^{n} x_{i}
-\]</div>
-<p><strong>2.2 Median</strong></p>
-<p>Median juga salah satu ukuran pemusatan data. cara menghitungnya adalah semua data diurutkan kemudian kita ambil nilai tengah nya</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal {median} = tb + (\frac {\frac {n} 2 - F } {Fm} ) p
-\]</div>
-<p>Penjelasan :</p>
-<ul class="simple">
-<li><p>Tb = tepi bawah dari kelas n/2</p></li>
-<li><p>F = Frekuensi kumulatif sebelum kelas median</p></li>
-<li><p>Fm = frekuensi kelas median</p></li>
-<li><p>p = interval</p></li>
-</ul>
-<p><strong>2.3 Modus</strong></p>
-<p>Modus adalah nilai yang sering muncul</p>
-<p><strong>2.4 Perhitungan</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mean</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">irisdata</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">])</span>
+<span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="c1"># Number of clusters</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Fitting the input data</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="c1"># Getting the cluster labels</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="c1"># Centroid values</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Iris-setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-versicolor&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-virginica&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">irisdata</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">],</span><span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span><span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.46
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 precision    recall  f1-score   support
+
+    Iris-setosa       1.00      1.00      1.00        50
+Iris-versicolor       0.77      0.96      0.86        50
+ Iris-virginica       0.95      0.72      0.82        50
+
+       accuracy                           0.89       150
+      macro avg       0.91      0.89      0.89       150
+   weighted avg       0.91      0.89      0.89       150
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#median</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.35
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modus</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    22.05
-dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik">
-<h1>3. Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)<a class="headerlink" href="#mendeskripsikan-kemiringan-skewned-dari-data-setiap-variable-bertipe-numerik" title="Permalink to this headline">#</a></h1>
-<p>Skewness adalah ukuran ketidaksimetrisan dalam distribusi nilai. Skewness dapat bernilai positif, negatif, dan nol.</p>
-<p>Skewness yang bernilai positif berarti ekor distribusi berada di sebelah kanan nilai terbanyak. Berarti, sebagian besar distribusi berada di nilai rendah. Skewness yang bernilai negatif berarti ekor distribusi berada di sebelah kiri, menunjukkan bahwa sebagian besar nilai berada di sisi kanan kurva. Sementara skewness bernilai nol berarti nilai terdistribusi secara simetris, dengan jarak antara ekor distribusi sebelah kanan dan kiri sama besar.
-$<span class="math notranslate nohighlight">\(
-skewness =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{3}}{(n-1) s^{3}}
-\)</span>$</p>
-<p>Penjelasan</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\bar{x}\)</span> adalah sampel mean</p></li>
-<li><p>s adalah standar deviasi</p></li>
-<li><p><span class="math notranslate nohighlight">\(x_{i}\)</span> adalah sampel</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;Length&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/1-statistika-deskriptif_13_1.png" src="_images/1-statistika-deskriptif_13_1.png" />
 </div>
 </div>
 </section>
@@ -778,19 +604,12 @@ skewness =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{3}}{(n-1) s^{3}}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3-KNN-IRISDataset.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">Tugas 3 - Belajar KNN</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="2-diskritisasi.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 2 - Diskritisasi</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
