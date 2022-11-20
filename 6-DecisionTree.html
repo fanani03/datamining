@@ -159,6 +159,16 @@ const thebe_selector_output = ".output, .cell_output"
    Tugas 7 - Diabetic Retinopathy
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8-Bagging.html">
+   Tugas 8 - Ensemble Learning Bagging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9-RegresiLinier.html">
+   Tugas 9 - Regresi Linier
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -343,12 +353,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 6 - Decision Tree
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#istilah-istilah-penting">
+   Istilah - istilah penting
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -360,6 +399,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 6 - Decision Tree
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#istilah-istilah-penting">
+   Istilah - istilah penting
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -369,6 +426,28 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-decision-tree">
 <h1>Tugas 6 - Decision Tree<a class="headerlink" href="#tugas-6-decision-tree" title="Permalink to this headline">#</a></h1>
+<p>Decision tree adalah algoritma machine learning yang menggunakan seperangkat aturan untuk membuat keputusan dengan struktur seperti pohon yang memodelkan kemungkinan hasil, biaya sumber daya, utilitas dan kemungkinan konsekuensi atau resiko. Konsepnya adalah dengan cara menyajikan algoritma dengan pernyataan bersyarat, yang meliputi cabang untuk mewakili langkah-langkah pengambilan keputusan yang dapat mengarah pada hasil yang menguntungkan.</p>
+<p>Tujuan dari penggunaan decision tree adalah untuk membuat sebuah model yang dapat digunakan untuk memprediksi kelas atau nilai dari variabel target dengan mempelajari aturan pengambilan keputusan sederhana yang disimpulkan dari data sebelumnya.</p>
+<p>Dalam decision tree terdapat dua jenis node, yaitu decision node dan leaf node. Decision node mewakili fitur dari dataset dan digunakan untuk membuat keputusan. Leaf node adalah output dari keputusan tersebut dan tidak berisi cabang lebih lanjut.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="istilah-istilah-penting">
+<h1>Istilah - istilah penting<a class="headerlink" href="#istilah-istilah-penting" title="Permalink to this headline">#</a></h1>
+<p><strong>Root Node</strong></p>
+<p>Root node merupakan node yang paling tinggi di dalam struktur pohon dan tidak memiliki parent node. Node ini merupakan atribut global dan mewakili keseluruhan sampel. Root node bisa memiliki dua atau lebih sub-node dan ditentukan berdasarkan hasil dari Attribute Selection Measure (ASM).</p>
+<p><strong>Sub Tree / Branch</strong></p>
+<p>Sub-tree / Branch adalah sub-bagian atau cabang dari keseluruhan pohon. Struktur di dalam kotak pada gambar sebelumnya merupakan contoh dari sub-tree.</p>
+<p><strong>Decision node</strong></p>
+<p>Decision node merepresentasikan fitur-fitur atau atribut-atribut di dataset dan digunakan untuk membuat keputusan.</p>
+<p><strong>Leaf node</strong></p>
+<p>Leaf node merupakan output atau hasil dari keputusan yang tidak memiliki cabang lebih lanjut.</p>
+<p><strong>Parent and child node</strong></p>
+<p>Sebuah node yang memiliki cabang lagi disebut dengan parent node, sedangkan node cabang (sub-node) yang dimaksud disebut dengan child node dari parent node tersebut.</p>
+<p><strong>Pruning</strong></p>
+<p>Pruning dalam decision tree berarti menghapus sebuah sub-tree yang berlebihan dan tidak berguna dan menggantinya dengan leaf node. Teknik ini berfungsi untuk membantu mencegah overfitting pada data latih sehingga model bekerja dengan baik pada data baru (unseen data)</p>
+<p><strong>Information gain</strong></p>
+<p>Information gain dapat diartikan sebagai ukuran seberapa banyak sebuah fitur memberikan informasi tentang sebuah kelas/target. Ini merupakan salah satu metode Attribute Selection Measure (ASM) untuk menentukan seberapa baik sebuah fitur untuk dijadikan decision node.</p>
+<p><strong>Entropy</strong></p>
+<p>Entropy adalah metrik teori informasi yang digunakan untuk mengukur ketidakmurnian (impurity) atau ketidakpastian (uncertainty) di dalam sebuah kelompok pengamatan. Entropy menentukan bagaimana decision tree membagi data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -380,7 +459,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mengambil dataset dari url</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
@@ -388,7 +469,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4d0a2bb6-4ac7-4f4a-8d59-b58d50ef2787">
+  <div id="df-749ac408-8936-40c2-a322-560402334166">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -508,7 +589,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4d0a2bb6-4ac7-4f4a-8d59-b58d50ef2787')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-749ac408-8936-40c2-a322-560402334166')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -559,12 +640,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4d0a2bb6-4ac7-4f4a-8d59-b58d50ef2787 button.colab-df-convert');
+          document.querySelector('#df-749ac408-8936-40c2-a322-560402334166 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4d0a2bb6-4ac7-4f4a-8d59-b58d50ef2787');
+          const element = document.querySelector('#df-749ac408-8936-40c2-a322-560402334166');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -587,7 +668,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Memisah fitur dengan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -604,8 +686,11 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span><span class="p">,</span> <span class="n">export_graphviz</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Proses Modelling</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span><span class="p">,</span> <span class="n">export_graphviz</span>
 <span class="n">d3</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+
+<span class="c1">#Memasukkan dataset untuk proses training</span>
 <span class="n">d3</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -631,7 +716,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_predic</span> <span class="o">=</span> <span class="n">d3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Proses Prediksi</span>
+<span class="n">y_predic</span> <span class="o">=</span> <span class="n">d3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="n">y_predic</span>
 </pre></div>
 </div>
@@ -657,7 +743,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e9f3a904-ff29-4095-9b18-c1f9475efa2b">
+  <div id="df-869c98ac-bd84-48cc-80f8-4158b458a572">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -835,7 +921,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e9f3a904-ff29-4095-9b18-c1f9475efa2b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-869c98ac-bd84-48cc-80f8-4158b458a572')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -886,12 +972,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e9f3a904-ff29-4095-9b18-c1f9475efa2b button.colab-df-convert');
+          document.querySelector('#df-869c98ac-bd84-48cc-80f8-4158b458a572 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e9f3a904-ff29-4095-9b18-c1f9475efa2b');
+          const element = document.querySelector('#df-869c98ac-bd84-48cc-80f8-4158b458a572');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -912,6 +998,20 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predic</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9666666666666667
+</pre></div>
+</div>
+</div>
+</div>
+<p>Akurasi yang dihasilkan <strong>96%</strong></p>
 </section>
 
     <script type="text/x-thebe-config">

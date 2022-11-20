@@ -159,6 +159,16 @@ const thebe_selector_output = ".output, .cell_output"
    Tugas 7 - Diabetic Retinopathy
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8-Bagging.html">
+   Tugas 8 - Ensemble Learning Bagging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9-RegresiLinier.html">
+   Tugas 9 - Regresi Linier
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -369,16 +379,26 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-4-kmeans-clustering">
 <h1>Tugas 4 - KMeans Clustering<a class="headerlink" href="#tugas-4-kmeans-clustering" title="Permalink to this headline">#</a></h1>
+<p>Kmeans adalah salah satu metode clustering yang bertujuan untuk mengelompokan suatu kumpulan data menjadi beberapa kelompok. Idenya adalah dengan mengelompokkan data yang memiliki kemiripan berada dalam 1 kelompok dan memisahkan data yang berbeda kedalam kelompok yang berbeda.</p>
+<p>Cara Kerja algoritma KMeans Clustering</p>
+<ul class="simple">
+<li><p>Langkah 1 : Tentukan jumlah cluster yang akan dibuat. Jumlah cluster adalah nilai “K” pada “K-means clustering”.</p></li>
+<li><p>Langkah 2 : Pilih 3 titik data secara random sebagai inisial centroid cluster</p></li>
+<li><p>Langkah 3 : Hitung jarak tiap data ke semua centroid cluster</p></li>
+<li><p>Langkah 4 : Tetapkan data X menjadi anggota cluster yang terdekat</p></li>
+<li><p>Lakukan langkah 3 dan 4 pada point lainnya</p></li>
+<li><p>Langkah 5 : Hitung centroid (mean) dari setiap anggota cluster</p></li>
+<li><p>Lakukan langkah 3 dan 4 hingga titik centroid cluster tidak berubah.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&quot;</span>
 <span class="c1">#the imported dataset does not have the required column names so lets add it</span>
-<span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepalL&#39;</span><span class="p">,</span> <span class="s1">&#39;sepalW&#39;</span><span class="p">,</span> <span class="s1">&#39;petalL&#39;</span><span class="p">,</span> <span class="s1">&#39;petalW&#39;</span><span class="p">,</span> <span class="s1">&#39;Class&#39;</span><span class="p">]</span>
+<span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal-length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal-width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal-length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal-width&#39;</span><span class="p">,</span> <span class="s1">&#39;Class&#39;</span><span class="p">]</span>
 <span class="n">irisdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">colnames</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -392,7 +412,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8553b7bc-e45f-4729-aeb9-871083d95101">
+  <div id="df-eb536e41-9eb6-4f6a-820e-37292d258357">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -412,10 +432,10 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sepalL</th>
-      <th>sepalW</th>
-      <th>petalL</th>
-      <th>petalW</th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
       <th>Class</th>
     </tr>
   </thead>
@@ -463,7 +483,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8553b7bc-e45f-4729-aeb9-871083d95101')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eb536e41-9eb6-4f6a-820e-37292d258357')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -514,12 +534,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8553b7bc-e45f-4729-aeb9-871083d95101 button.colab-df-convert');
+          document.querySelector('#df-eb536e41-9eb6-4f6a-820e-37292d258357 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8553b7bc-e45f-4729-aeb9-871083d95101');
+          const element = document.querySelector('#df-eb536e41-9eb6-4f6a-820e-37292d258357');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -542,16 +562,31 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">irisdata</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">])</span>
-<span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">le</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">ybaru</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">ybaru</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
 </pre></div>
 </div>
 </div>
@@ -568,30 +603,33 @@ title="Print to PDF"
 <span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="c1"># Centroid values</span>
 <span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 
-<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Iris-setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-versicolor&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-virginica&#39;</span><span class="p">]</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">irisdata</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">],</span><span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span><span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">centroids_x</span> <span class="o">=</span> <span class="n">centroids</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">centroids_y</span> <span class="o">=</span> <span class="n">centroids</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroids_x</span><span class="p">,</span><span class="n">centroids_y</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 precision    recall  f1-score   support
-
-    Iris-setosa       1.00      1.00      1.00        50
-Iris-versicolor       0.77      0.96      0.86        50
- Iris-virginica       0.95      0.72      0.82        50
-
-       accuracy                           0.89       150
-      macro avg       0.91      0.89      0.89       150
-   weighted avg       0.91      0.89      0.89       150
+<img alt="_images/4-KMeans-Clustering_5_0.png" src="_images/4-KMeans-Clustering_5_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">ybaru</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.24
 </pre></div>
 </div>
 </div>

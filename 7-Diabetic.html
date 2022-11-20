@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tugas 8 - Ensemble Learning Bagging" href="8-Bagging.html" />
     <link rel="prev" title="UTS" href="200411100143-UTS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -156,6 +157,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Tugas 7 - Diabetic Retinopathy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8-Bagging.html">
+   Tugas 8 - Ensemble Learning Bagging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9-RegresiLinier.html">
+   Tugas 9 - Regresi Linier
   </a>
  </li>
 </ul>
@@ -517,7 +528,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c5359454-8bc7-430d-b482-b3063af96c7a">
+  <div id="df-2cefb554-9853-4821-b8bd-a88117603d9a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -678,7 +689,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c5359454-8bc7-430d-b482-b3063af96c7a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2cefb554-9853-4821-b8bd-a88117603d9a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -729,12 +740,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c5359454-8bc7-430d-b482-b3063af96c7a button.colab-df-convert');
+          document.querySelector('#df-2cefb554-9853-4821-b8bd-a88117603d9a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c5359454-8bc7-430d-b482-b3063af96c7a');
+          const element = document.querySelector('#df-2cefb554-9853-4821-b8bd-a88117603d9a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -788,7 +799,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c8de8d68-2e08-4aee-ba66-7dfdb54e4767">
+  <div id="df-36c04929-9eba-4abd-ae37-4aebacfab696">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1088,7 +1099,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c8de8d68-2e08-4aee-ba66-7dfdb54e4767')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-36c04929-9eba-4abd-ae37-4aebacfab696')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1139,12 +1150,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c8de8d68-2e08-4aee-ba66-7dfdb54e4767 button.colab-df-convert');
+          document.querySelector('#df-36c04929-9eba-4abd-ae37-4aebacfab696 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c8de8d68-2e08-4aee-ba66-7dfdb54e4767');
+          const element = document.querySelector('#df-36c04929-9eba-4abd-ae37-4aebacfab696');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1331,7 +1342,7 @@ weighted avg       0.65      0.63      0.63       346
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-84118826-8201-44cd-b949-0453afc1772a">
+  <div id="df-bdd5614f-ca00-4264-9c63-6b675ff86655">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1596,7 +1607,7 @@ weighted avg       0.65      0.63      0.63       346
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-84118826-8201-44cd-b949-0453afc1772a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-bdd5614f-ca00-4264-9c63-6b675ff86655')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1647,12 +1658,12 @@ weighted avg       0.65      0.63      0.63       346
 
       <script>
         const buttonEl =
-          document.querySelector('#df-84118826-8201-44cd-b949-0453afc1772a button.colab-df-convert');
+          document.querySelector('#df-bdd5614f-ca00-4264-9c63-6b675ff86655 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-84118826-8201-44cd-b949-0453afc1772a');
+          const element = document.querySelector('#df-bdd5614f-ca00-4264-9c63-6b675ff86655');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1716,22 +1727,6 @@ weighted avg       0.65      0.63      0.63       346
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="save-model-knn-normalisasi">
-<h1>Save model KNN Normalisasi<a class="headerlink" href="#save-model-knn-normalisasi" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filenameModelKnnNorm</span> <span class="o">=</span> <span class="s1">&#39;modelKnnNormalisasi.pkl&#39;</span>
-<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">filenameModelKnnNorm</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;modelKnnNormalisasi.pkl&#39;]
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span>
@@ -1768,6 +1763,35 @@ weighted avg       0.65      0.63      0.63       346
 </div>
 </div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="save-model-knn-normalisasi">
+<h1>Save model KNN Normalisasi<a class="headerlink" href="#save-model-knn-normalisasi" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">xtrain</span><span class="p">,</span><span class="n">ytrain</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=24)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filenameModelKnnNorm</span> <span class="o">=</span> <span class="s1">&#39;modelKnnNormalisasi.pkl&#39;</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">filenameModelKnnNorm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;modelKnnNormalisasi.pkl&#39;]
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1782,7 +1806,7 @@ weighted avg       0.65      0.63      0.63       346
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/7-Diabetic_27_1.png" src="_images/7-Diabetic_27_1.png" />
+<img alt="_images/7-Diabetic_28_1.png" src="_images/7-Diabetic_28_1.png" />
 </div>
 </div>
 </section>
@@ -1827,12 +1851,363 @@ weighted avg       0.65      0.65      0.65       346
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">,:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">test_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">test_data</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
+
+<span class="c1"># data_baru = [[1.0,1.0,22.0,22.0,22.0,19.0,18.0,14.0,49.323,17.231,5.270,0.777,0.018,0.006,0.003,0.003,0.486,0.100,1.0]]</span>
+
+<span class="c1"># pd.DataFrame(data_baru)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 19)
+<div class="output text_html">
+  <div id="df-1c433f87-5217-4c14-a0f2-18c3e94080a2">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+      <th>17</th>
+      <th>18</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>22.0</td>
+      <td>22.0</td>
+      <td>22.0</td>
+      <td>19.0</td>
+      <td>18.0</td>
+      <td>14.0</td>
+      <td>49.895756</td>
+      <td>17.775994</td>
+      <td>5.270920</td>
+      <td>0.771761</td>
+      <td>0.018632</td>
+      <td>0.006864</td>
+      <td>0.003923</td>
+      <td>0.003923</td>
+      <td>0.486903</td>
+      <td>0.100025</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>24.0</td>
+      <td>24.0</td>
+      <td>22.0</td>
+      <td>18.0</td>
+      <td>16.0</td>
+      <td>13.0</td>
+      <td>57.709936</td>
+      <td>23.799994</td>
+      <td>3.325423</td>
+      <td>0.234185</td>
+      <td>0.003903</td>
+      <td>0.003903</td>
+      <td>0.003903</td>
+      <td>0.003903</td>
+      <td>0.520908</td>
+      <td>0.144414</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>62.0</td>
+      <td>60.0</td>
+      <td>59.0</td>
+      <td>54.0</td>
+      <td>47.0</td>
+      <td>33.0</td>
+      <td>55.831441</td>
+      <td>27.993933</td>
+      <td>12.687485</td>
+      <td>4.852282</td>
+      <td>1.393889</td>
+      <td>0.373252</td>
+      <td>0.041817</td>
+      <td>0.007744</td>
+      <td>0.530904</td>
+      <td>0.128548</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>55.0</td>
+      <td>53.0</td>
+      <td>53.0</td>
+      <td>50.0</td>
+      <td>43.0</td>
+      <td>31.0</td>
+      <td>40.467228</td>
+      <td>18.445954</td>
+      <td>9.118901</td>
+      <td>3.079428</td>
+      <td>0.840261</td>
+      <td>0.272434</td>
+      <td>0.007653</td>
+      <td>0.001531</td>
+      <td>0.483284</td>
+      <td>0.114790</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>44.0</td>
+      <td>44.0</td>
+      <td>44.0</td>
+      <td>41.0</td>
+      <td>39.0</td>
+      <td>27.0</td>
+      <td>18.026254</td>
+      <td>8.570709</td>
+      <td>0.410381</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.475935</td>
+      <td>0.123572</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>44.0</td>
+      <td>43.0</td>
+      <td>41.0</td>
+      <td>41.0</td>
+      <td>37.0</td>
+      <td>29.0</td>
+      <td>28.356400</td>
+      <td>6.935636</td>
+      <td>2.305771</td>
+      <td>0.323724</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.502831</td>
+      <td>0.126741</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>29.0</td>
+      <td>29.0</td>
+      <td>27.0</td>
+      <td>25.0</td>
+      <td>16.0</td>
+      <td>15.448398</td>
+      <td>9.113819</td>
+      <td>1.633493</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.541743</td>
+      <td>0.139575</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>20.679649</td>
+      <td>9.497786</td>
+      <td>1.223660</td>
+      <td>0.150382</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.576318</td>
+      <td>0.071071</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>22.0</td>
+      <td>21.0</td>
+      <td>18.0</td>
+      <td>15.0</td>
+      <td>13.0</td>
+      <td>10.0</td>
+      <td>66.691933</td>
+      <td>23.545543</td>
+      <td>6.151117</td>
+      <td>0.496372</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.500073</td>
+      <td>0.116793</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>79.0</td>
+      <td>75.0</td>
+      <td>73.0</td>
+      <td>71.0</td>
+      <td>64.0</td>
+      <td>47.0</td>
+      <td>22.141784</td>
+      <td>10.054384</td>
+      <td>0.874633</td>
+      <td>0.099780</td>
+      <td>0.023386</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.560959</td>
+      <td>0.109134</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1c433f87-5217-4c14-a0f2-18c3e94080a2')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-1c433f87-5217-4c14-a0f2-18c3e94080a2 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-1c433f87-5217-4c14-a0f2-18c3e94080a2');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scaler = joblib.load(filename)</span>
+<span class="c1"># data_baru = scaler.fit_transform(data_baru)</span>
+<span class="c1"># pd.DataFrame(data_baru)</span>
 </pre></div>
 </div>
 </div>
@@ -1848,7 +2223,7 @@ weighted avg       0.65      0.65      0.65       346
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-52e4d423-7bf6-477c-b214-8c74c87372ed">
+  <div id="df-cf53e406-2400-4697-893c-871f22a9764f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2113,7 +2488,7 @@ weighted avg       0.65      0.65      0.65       346
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-52e4d423-7bf6-477c-b214-8c74c87372ed')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cf53e406-2400-4697-893c-871f22a9764f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2164,12 +2539,12 @@ weighted avg       0.65      0.65      0.65       346
 
       <script>
         const buttonEl =
-          document.querySelector('#df-52e4d423-7bf6-477c-b214-8c74c87372ed button.colab-df-convert');
+          document.querySelector('#df-cf53e406-2400-4697-893c-871f22a9764f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-52e4d423-7bf6-477c-b214-8c74c87372ed');
+          const element = document.querySelector('#df-cf53e406-2400-4697-893c-871f22a9764f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2201,13 +2576,13 @@ weighted avg       0.65      0.65      0.65       346
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_d</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
 <span class="n">inp_pred</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 0, 1, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
 </pre></div>
 </div>
 </div>
@@ -2247,6 +2622,13 @@ weighted avg       0.65      0.65      0.65       346
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">UTS</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="8-Bagging.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas 8 - Ensemble Learning Bagging</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
